@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h1>Verify OTP</h1>
+    <form id="otpForm" action="/admin/verify-otp" method="POST">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" name="enteredOtp" required>
+        <button type="submit">Verify</button>
+    </form>
+    <div id="message">
+        <!-- This will show the message after redirection -->
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } %>
+    </div>
+</body>
+</html>
